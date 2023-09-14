@@ -6,6 +6,24 @@ Private pieceOrient As Long 'Orientation of the piece'
 Private pieceName As String 'Name of the current piece'
 Private startHeight As Long 'Height to position new piece'
 
+' These procedures need to be added to the code module of the relevant worksheet. '
+'---------------------------------------------------------------------------------'
+
+'Moves piece to the left after button press'
+Private Sub scrollButtons_SpinDown()
+    Application.ScreenUpdating = False
+    ShiftPiece -1
+End Sub
+
+'Moves piece to the right after button press'
+Private Sub scrollButtons_SpinUp()
+    Application.ScreenUpdating = False
+    ShiftPiece 1
+End Sub
+
+' These procedures can be placed in their own module, alongside the declarations.'
+'---------------------------------------------------------------------------------'
+
 'Resets the game by clearing the board/line counts and getting a new piece'
 Sub Reset()
 Attribute Reset.VB_Description = "Starts new game of Tetris."
