@@ -31,7 +31,6 @@ Attribute Reset.VB_ProcData.VB_Invoke_Func = "R\n14"
     Application.ScreenUpdating = False
     startHeight = 3
     CreatePieceDict
-    Randomize
     ClearRange Range("board")
     Range("lines") = 0
     NextPiece
